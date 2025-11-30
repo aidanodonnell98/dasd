@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sketch &amp; Stick Figure Playground</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">Browser Toy</p>
+        <h1>Draw toys and let the stick figure play</h1>
+        <p>Create quick doodles (swords, platforms, props) directly on the canvas. Use the arrow keys to move, space to jump, and watch the stick figure grab nearby swords to swing them around.</p>
+        <div class="legend">
+          <div class="legend-item"><span class="chip">Left click / drag</span> Draw a doodle for the selected item type</div>
+          <div class="legend-item"><span class="chip">Arrow keys</span> Walk the stick figure</div>
+          <div class="legend-item"><span class="chip">Space</span> Jump</div>
+          <div class="legend-item"><span class="chip">R</span> Reset doodles</div>
+        </div>
+      </div>
+      <div class="panel">
+        <label for="tool">Item type</label>
+        <select id="tool">
+          <option value="sword">Sword (stick picks it up)</option>
+          <option value="platform">Platform (he can stand on it)</option>
+          <option value="prop">Prop (obstacle / scenery)</option>
+          <option value="bounce">Bounce pad (launches him)</option>
+        </select>
+        <button id="clear" type="button">Clear items</button>
+      </div>
+    </header>
+
+    <section class="canvas-wrapper">
+      <canvas id="world" width="1100" height="680" aria-label="playground"></canvas>
+      <div class="hint">Draw on the canvas, then walk the stick figure into your doodles.</div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
